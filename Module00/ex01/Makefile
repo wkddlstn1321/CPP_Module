@@ -4,13 +4,13 @@ CFLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp
 OBJ		= $(SRC:.cpp=.o)
 
-%.o : %.cpp
-	$(CC) $(CFLAGS) -c $(SRC)
+$(NAME) : $(OBJ)
+	$(CC) $(CFLAGS) $^ -o $(NAME)
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
-	$(CC) $(CFLAGS) $^ -o $(NAME)
+%.o : %.cpp
+	$(CC) $(CFLAGS) -c $(SRC)
 
 clean :
 	rm -f $(OBJ)
