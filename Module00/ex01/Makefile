@@ -1,7 +1,7 @@
 NAME	= phoneBook
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= Main.cpp
+SRC		= main.cpp
 OBJ		= $(SRC:.cpp=.o)
 
 %.o : %.cpp

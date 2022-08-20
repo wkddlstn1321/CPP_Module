@@ -1,5 +1,4 @@
-#include<iostream>
-#include"class.cpp"
+#include"main.hpp"
 
 int	main(void)
 {
