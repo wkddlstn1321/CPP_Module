@@ -5,32 +5,60 @@
 
 class Contact {
 
-public:
+private:
 		std::string	firstName;
 		std::string lastName;
 		std::string nickName;
 		std::string phoneNum;
 		std::string darkistPassword;
-
+public:
+	void	SetContact(void)
+	{
+		std::cout << "firstName input\n";
+		std::cin >> firstName;
+		std::cout << "lastName input\n";
+		std::cin >> lastName;
+		std::cout << "nickName input\n";
+		std::cin >> nickName;
+		std::cout << "phoneNum input\n";
+		std::cin >> phoneNum;
+		std::cout << "darkistPassword input\n";
+		std::cin >> darkistPassword;
+	}
+	std::string	GetFirstName(void)
+	{
+		return (firstName);
+	}
+	std::string GetLastName(void)
+	{
+		return (lastName);
+	}
+	std::string GetNickName(void)
+	{
+		return (nickName);
+	}
+	std::string GetphoneNum(void)
+	{
+		return (phoneNum);
+	}
+	std::string GetDakistPassword(void)
+	{
+		return (darkistPassword);
+	}
+	std::string GetFirstName(void)
+	{
+		return (firstName);
+	}
 };
 
 
 class PhoneBook {
-public:
+
+private:
 		Contact contact[8];
 
-		void AddContact(int i) {
-			std::cout << "firstName input\n";
-			std::cin >> contact[i % 8].firstName;
-			std::cout << "lastName input\n";
-			std::cin >> contact[i % 8].lastName;
-			std::cout << "nickName input\n";
-			std::cin >> contact[i % 8].nickName;
-			std::cout << "phoneNum input\n";
-			std::cin >> contact[i % 8].phoneNum;
-			std::cout << "darkistPassword input\n";
-			std::cin >> contact[i % 8].darkistPassword;
-		}
+public:
+		void	AddContact(int	i);
 };
 
 #endif
