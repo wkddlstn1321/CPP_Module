@@ -9,16 +9,12 @@ int	main(void)
 	i = 0;
 	while (1)
 	{
-		i %= 8;
 		std::cout << "input cmd" << std::endl;
 		std::cin >> cmd;
 		if (cmd == "ADD")
-		{
-			pb[i] = pb.AddContact(i);
-			//pb.PrintContact(i);
-		}
+			pb.AddContact(i);
 		else if (cmd == "SEARCH")
-			;//pb.Search();
+			pb.SearchContact(i);
 		else if (cmd == "EXIT")
 			break ;
 		else

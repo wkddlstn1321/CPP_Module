@@ -12,20 +12,28 @@ private:
 		std::string phoneNum;
 		std::string darkistPassword;
 public:
-	Contact	SettingContact(void)
+	Contact	SettingContact()
 	{
 		Contact contact;
 		std::cout << "firstName input\n";
-		std::cin >> contact.firstName;
+		std::cin >> this->firstName;
 		std::cout << "lastName input\n";
-		std::cin >> contact.lastName;
+		std::cin >> this->lastName;
 		std::cout << "nickName input\n";
-		std::cin >> contact.nickName;
+		std::cin >> this->nickName;
 		std::cout << "phoneNum input\n";
-		std::cin >> contact.phoneNum;
+		std::cin >> this->phoneNum;
 		std::cout << "darkistPassword input\n";
-		std::cin >> contact.darkistPassword;
-		return (contact);
+		std::cin >> this->darkistPassword;
+		return (*this);
+	}
+	void	ViewContact()
+	{
+		std::cout << this->firstName << std::endl;
+		std::cout << this->lastName << std::endl;
+		std::cout << this->nickName << std::endl;
+		std::cout << this->phoneNum << std::endl;
+		std::cout << this->darkistPassword << std::endl;
 	}
 };
 
@@ -33,24 +41,42 @@ public:
 class PhoneBook {
 
 private:
-		Contact contact[8];
+		Contact contacts[8];
 
 public:
-		Contact	AddContact(int	i)
+		void	AddContact(int i)
 		{
 			Contact contact;
 
-			contact.SettingContact();
-			this.contact[i]
+			this->contacts[i % 8] = contact.SettingContact();
 		}
 
-		// void	PrintContact(int i)
-		// {
-		// 	std::cout << this->contact[i].firstName << std::endl;
-		// 	std::cout << this->contact[i].lastName << std::endl;
-		// 	std::cout << this->contact[i].nickName << std::endl;
-		// 	std::cout << this->contact[i].phoneNum << std::endl;
-		// }
+		void	SearchContact(int i)
+		{
+			int	idx;
+
+			std::cout << "input Search index" << std::endl;
+			while (1)
+			{
+				std::cin >> idx;
+				if (!std::cin.fail())
+					break ;
+				std::cout << "wrong index\nretry input index!!!" << std::endl;
+				std::cin.clear();
+				std::cin.ignore(256, '\n');
+			}
+			if (i < idx)
+			{
+				std::cout << "non non be yory" << std::endl;
+				return ;
+			}
+			PrintContact(i);
+		}
+
+		void	PrintContact(int i)
+		{
+			this->contacts[i % 8].ViewContact();
+		}
 };
 
 #endif
