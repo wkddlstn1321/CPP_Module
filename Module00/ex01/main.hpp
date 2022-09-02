@@ -44,11 +44,11 @@ private:
 		Contact contacts[8];
 
 public:
-		void	AddContact(int i)
+		void	AddContact(int currIdx)
 		{
 			Contact contact;
 
-			this->contacts[i % 8] = contact.SettingContact();
+			this->contacts[currIdx] = contact.SettingContact();
 		}
 
 		void	SearchContact(int i)
