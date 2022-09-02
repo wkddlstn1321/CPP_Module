@@ -16,7 +16,10 @@ int	main(void)
 		else if (cmd == "SEARCH")
 			pb.SearchContact(i);
 		else if (cmd == "EXIT")
+		{
+			std::cout << "exit PhoneBook~~" << std::endl;
 			break ;
+		}
 		else
 			std::cout << "must input ADD or SEARCH or EXIT" << std::endl;
 		i++;
