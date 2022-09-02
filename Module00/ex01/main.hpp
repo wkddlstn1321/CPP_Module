@@ -63,7 +63,8 @@ public:
 					break ;
 				std::cout << "wrong index\nretry input index!!!" << std::endl;
 				std::cin.clear();
-				std::cin.ignore(256, '\n');
+				std::ci
+				n.ignore(256, '\n');
 			}
 			if (i < idx)
 			{
