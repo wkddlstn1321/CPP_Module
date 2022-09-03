@@ -2,6 +2,7 @@
 # define CONTACT_HPP
 
 # include<iostream>
+# include<string>
 
 class Contact {
 
@@ -14,8 +15,9 @@ private:
 public:
 	Contact	SettingContact();
 	std::string	cutStr(std::string str);
-	void	SearchView(int i);
-	void	ViewContact();
+	std::string	phoneNumCheck(std::string str);
+	void		SearchView(int i);
+	void		ViewContact();
 };
 
 #endif

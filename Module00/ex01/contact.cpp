@@ -2,23 +2,23 @@
 
 Contact	Contact::SettingContact()
 {
-	std::cout << "firstName input\n";
+	std::string	str;
+
+	std::cout << "firstName input" << std::endl;
 	std::cin >> this->firstName;
 	if (std::cin.eof())
 		exit(0);
-	std::cout << "lastName input\n";
+	std::cout << "lastName input" << std::endl;
 	std::cin >> this->lastName;
 	if (std::cin.eof())
 		exit(0);
-	std::cout << "nickName input\n";
+	std::cout << "nickName input" << std::endl;
 	std::cin >> this->nickName;
 	if (std::cin.eof())
 		exit(0);
-	std::cout << "phoneNum input\n";
-	std::cin >> this->phoneNum;
-	if (std::cin.eof())
-		exit(0);
-	std::cout << "darkistPassword input\n";
+	str = phoneNumCheck(str);
+	this->phoneNum = str;
+	std::cout << "darkistPassword input" << std::endl;
 	std::cin >> this->darkistPassword;
 	if (std::cin.eof())
 		exit(0);
@@ -51,4 +51,26 @@ void	Contact::ViewContact()
 	std::cout << "nick Name : " << this->nickName << std::endl;
 	std::cout << "phone Num : " << this->phoneNum << std::endl;
 	std::cout << "Darkist Password : " << this->darkistPassword << std::endl;
+}
+
+std::string	Contact::phoneNumCheck(std::string str)
+{
+	int	i;
+
+	while (1)
+	{
+		std::cout << "phoneNum input" << std::endl;
+		std::cin >> str;
+		if (std::cin.eof())
+			exit(0);
+		for (i = 0; i < (int)str.length(); i++)
+		{
+			if (str[i] < '0' || str[i] > '9')
+				break ;
+		}
+		if (i == (int)str.length())
+			return (str);
+		else
+			std::cout << "only input number" << std::endl;
+	}
 }
