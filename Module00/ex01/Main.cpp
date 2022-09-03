@@ -13,6 +13,8 @@ int	main(void)
 		currIdx = i % 8;
 		std::cout << "=====input cmd=====" << std::endl;
 		std::cin >> cmd;
+		if (std::cin.eof())
+			exit(0);
 		if (cmd == "ADD")
 		{
 			pb.AddContact(currIdx);
@@ -23,7 +25,7 @@ int	main(void)
 		else if (cmd == "EXIT")
 		{
 			std::cout << "exit PhoneBook~~" << std::endl;
-			break ;
+			break;
 		}
 		else
 			std::cout << "must input ADD or SEARCH or EXIT" << std::endl;

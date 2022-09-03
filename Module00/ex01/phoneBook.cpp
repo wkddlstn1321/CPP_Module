@@ -23,9 +23,11 @@ void	PhoneBook::SearchContact(int i)
 	{
 		std::cout << "=====input Search index=====" << std::endl;
 		std::cin >> idx;
+		if (std::cin.eof())
+			exit(0);
 		if (!std::cin.fail())
 		{
-			if (i < idx || idx < 0)
+			if (i < idx || idx < 0 || idx > 7)
 			{
 				std::cout << "non exist index" << std::endl;
 				continue ;

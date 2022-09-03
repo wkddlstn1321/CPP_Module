@@ -4,14 +4,24 @@ Contact	Contact::SettingContact()
 {
 	std::cout << "firstName input\n";
 	std::cin >> this->firstName;
+	if (std::cin.eof())
+		exit(0);
 	std::cout << "lastName input\n";
 	std::cin >> this->lastName;
+	if (std::cin.eof())
+		exit(0);
 	std::cout << "nickName input\n";
 	std::cin >> this->nickName;
+	if (std::cin.eof())
+		exit(0);
 	std::cout << "phoneNum input\n";
 	std::cin >> this->phoneNum;
+	if (std::cin.eof())
+		exit(0);
 	std::cout << "darkistPassword input\n";
 	std::cin >> this->darkistPassword;
+	if (std::cin.eof())
+		exit(0);
 	return (*this);
 }
 
