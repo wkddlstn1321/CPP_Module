@@ -1,4 +1,4 @@
-#include"main.hpp"
+#include"phoneBook.hpp"
 
 int	main(void)
 {
@@ -11,12 +11,15 @@ int	main(void)
 	while (1)
 	{
 		currIdx = i % 8;
-		std::cout << "input cmd" << std::endl;
+		std::cout << "=====input cmd=====" << std::endl;
 		std::cin >> cmd;
 		if (cmd == "ADD")
+		{
 			pb.AddContact(currIdx);
+			i++;
+		}
 		else if (cmd == "SEARCH")
-			pb.SearchContact(i);
+			pb.SearchContact(i - 1);
 		else if (cmd == "EXIT")
 		{
 			std::cout << "exit PhoneBook~~" << std::endl;
@@ -24,6 +27,5 @@ int	main(void)
 		}
 		else
 			std::cout << "must input ADD or SEARCH or EXIT" << std::endl;
-		i++;
 	}
 }
