@@ -12,6 +12,7 @@ private:
 		std::string nickName;
 		std::string phoneNum;
 		std::string darkistPassword;
+
 public:
 	Contact	SettingContact();
 	std::string	cutStr(std::string str);
