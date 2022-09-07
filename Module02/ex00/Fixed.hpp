@@ -7,7 +7,8 @@ class Fixed
 {
 
 private:
-	std::string	type;
+	int					fixedPoint;
+	static const int	eiFixed;
 
 public:
 	Fixed();
