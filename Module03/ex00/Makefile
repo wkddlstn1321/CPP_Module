@@ -1,4 +1,4 @@
-NAME	= number
+NAME	= ClapTrap
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp ClapTrap.cpp
