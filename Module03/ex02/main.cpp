@@ -1,9 +1,9 @@
-#include"ScarTrap.hpp"
+#include"FragTrap.hpp"
 
 int	main(void)
 {
-	ScarTrap	a("a");
-	ScarTrap	b("b");
+	FragTrap	a("a");
+	FragTrap	b("b");
 
 	std::cout << std::endl;
 	a.attack("b");
@@ -21,5 +21,5 @@ int	main(void)
 	a.takeDamage(b.getAttackDamage());
 	std::cout << std::endl;
 	a.beRepaired(10);
-	a.guardGate();
+	a.highFivesGuys();
 }
