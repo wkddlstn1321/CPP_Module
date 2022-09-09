@@ -24,25 +24,27 @@ public:
 
 	Fixed	&operator=(const Fixed &fixed);
 
-	Fixed	&operator>(const Fixed &fixed);
-	Fixed	&operator<(const Fixed &fixed);
-	Fixed	&operator>=(const Fixed &fixed);
-	Fixed	&operator<=(const Fixed &fixed);
-	Fixed	&operator==(const Fixed &fixed);
-	Fixed	&operator!=(const Fixed &fixed);
+	bool	operator>(const Fixed &fixed);
+	bool	operator<(const Fixed &fixed);
+	bool	operator>=(const Fixed &fixed);
+	bool	operator<=(const Fixed &fixed);
+	bool	operator==(const Fixed &fixed);
+	bool	operator!=(const Fixed &fixed);
 
-	Fixed	&operator+(const Fixed &fixed);
-	Fixed	&operator-(const Fixed &fixed);
-	Fixed	&operator*(const Fixed &fixed);
-	Fixed	&operator/(const Fixed &fixed);
+	Fixed	operator+(const Fixed &fixed);
+	Fixed	operator-(const Fixed &fixed);
+	Fixed	operator*(const Fixed &fixed);
+	Fixed	operator/(const Fixed &fixed);
 
-	Fixed	&operator++();
-	Fixed	&operator++(int);
-	Fixed	&operator--();
-	Fixed	&operator--(int);
+	Fixed&	operator++();
+	Fixed	operator++(int);
+	Fixed&	operator--();
+	Fixed	operator--(int);
 
-	static int&	min(Fixed& fixed);
-	static int&	max(Fixed &num1, Fixed &num2);
+	static float	min(Fixed& fixed1, Fixed& fixed2);
+	static float	min(const Fixed& fixed1, const Fixed& fixed2);
+	static float	max(Fixed& fixed1, Fixed& fixed2);
+	static float	max(const Fixed& fixed1, const Fixed& fixed2);
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
