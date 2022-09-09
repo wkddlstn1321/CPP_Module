@@ -1,7 +1,6 @@
 #ifndef SCARTRAP_HPP
 # define SCARTRAP_HPP
 
-#include<iostream>
 #include"ClapTrap.hpp"
 
 class ScarTrap : public ClapTrap
