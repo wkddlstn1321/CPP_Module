@@ -14,7 +14,7 @@ private:
 		std::string darkistPassword;
 
 public:
-	Contact	SettingContact();
+	Contact		SettingContact();
 	std::string	cutStr(std::string str);
 	std::string	phoneNumCheck(std::string str);
 	void		SearchView(int i);

@@ -17,8 +17,8 @@ void	PhoneBook::SearchContact(int i)
 		return ;
 	}
 	PrintSearchView();
-	for (int i = 0; i < 8; i++)
-		this->contacts[i].SearchView(i);
+	for (int j = 0; j < 8; j++)
+		this->contacts[j].SearchView(j);
 	while (1)
 	{
 		std::cout << "=====input Search index=====" << std::endl;

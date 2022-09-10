@@ -41,7 +41,7 @@ void	Contact::SearchView(int i)
 	std::cout.width(10);
 	std::cout << cutStr(this->lastName) << "|";
 	std::cout.width(10);
-	std::cout << cutStr(this->lastName) << "|" << std::endl;
+	std::cout << cutStr(this->nickName) << "|" << std::endl;
 }
 
 void	Contact::ViewContact()
@@ -55,7 +55,7 @@ void	Contact::ViewContact()
 
 std::string	Contact::phoneNumCheck(std::string str)
 {
-	int	i;
+	size_t	i;
 
 	while (1)
 	{
@@ -63,12 +63,12 @@ std::string	Contact::phoneNumCheck(std::string str)
 		std::cin >> str;
 		if (std::cin.eof())
 			exit(0);
-		for (i = 0; i < (int)str.length(); i++)
+		for (i = 0; i < str.length(); i++)
 		{
 			if (str[i] < '0' || str[i] > '9')
 				break ;
 		}
-		if (i == (int)str.length())
+		if (i == str.length())
 			return (str);
 		else
 			std::cout << "only input number" << std::endl;
