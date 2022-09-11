@@ -7,7 +7,7 @@ FragTrap::FragTrap()
 
 FragTrap::FragTrap(std::string name)
 {
-	std::cout << "FragTrap is created" << std::endl;
+	std::cout << "FragTrap " << name << " is created" << std::endl;
 	this->name = name;
 	this->hitPoints = 100;
 	this->energyPoints = 100;
@@ -16,7 +16,7 @@ FragTrap::FragTrap(std::string name)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap is died" << std::endl;
+	std::cout << "FragTrap " << this->name << " is died" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &scartrap)
