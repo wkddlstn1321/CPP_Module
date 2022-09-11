@@ -7,7 +7,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "ClapTrap is created" << std::endl;
+	std::cout << "ClapTrap "<< name << " is created" << std::endl;
 	this->name = name;
 	this->hitPoints = 10;
 	this->energyPoints = 10;
@@ -16,7 +16,7 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap is died" << std::endl;
+	std::cout << "ClapTrap " << this->name << " is died" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &clapTrap)
