@@ -7,7 +7,7 @@ ScarTrap::ScarTrap()
 
 ScarTrap::ScarTrap(std::string name)
 {
-	std::cout << "ScarTrap is created" << std::endl;
+	std::cout << "ScarTrap " << name << " is created" << std::endl;
 	this->name = name;
 	this->hitPoints = 100;
 	this->energyPoints = 50;
@@ -16,7 +16,7 @@ ScarTrap::ScarTrap(std::string name)
 
 ScarTrap::~ScarTrap()
 {
-	std::cout << "ScarTrap is died" << std::endl;
+	std::cout << "ScarTrap " << this->name << " is died" << std::endl;
 }
 
 ScarTrap::ScarTrap(const ScarTrap &scartrap)
