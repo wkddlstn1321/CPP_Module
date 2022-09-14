@@ -40,18 +40,14 @@ int	main(int ac, char **av)
 		return (1);
 	}
 	ofs.open(fileName + ".replace");
-	if (getline(ifs, line))
-	{
-		line = replaceLine(line, s1, s2);
-		ofs.write(line.c_str(), line.length());
-	}
 	while (true)
 	{
 		if (!getline(ifs, line))
 			break ;
-		ofs.write("\n", 1);
 		line = replaceLine(line, s1, s2);
 		ofs.write(line.c_str(), line.length());
+		if (!ofs.eof())
+			ofs.write("\n", 1);
 	}
 	ifs.close();
 	ofs.close();
