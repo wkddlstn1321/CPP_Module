@@ -56,7 +56,7 @@ Fixed	Fixed::operator--(int)
 {
 	Fixed	newFixed(*this);
 
-	newFixed.fixedPoint--;
+	this->fixedPoint--;
 	return (newFixed);
 }
 
