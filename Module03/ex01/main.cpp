@@ -2,24 +2,32 @@
 
 int	main(void)
 {
-	ScarTrap	a("a");
-	ScarTrap	b("b");
+	ScarTrap	scar("ScarTrap");
+	ClapTrap	clap("ClapTrap");
 
 	std::cout << std::endl;
-	a.attack("b");
+	clap.attack("ScarTrap");
 	std::cout << std::endl;
-	b.takeDamage(a.getAttackDamage());
+	scar.takeDamage(clap.getAttackDamage());
 	std::cout << std::endl;
-	b.beRepaired(2);
+	scar.attack("ClapTrap");
 	std::cout << std::endl;
-	a.attack("b");
+	clap.takeDamage(scar.getAttackDamage());
 	std::cout << std::endl;
-	b.takeDamage(a.getAttackDamage());
-	std::cout << std::endl;
-	b.attack("a");
-	std::cout << std::endl;
-	a.takeDamage(b.getAttackDamage());
-	std::cout << std::endl;
-	a.beRepaired(10);
-	a.guardGate();
+	// a.attack("b");
+	// std::cout << std::endl;
+	// b.takeDamage(a.getAttackDamage());
+	// std::cout << std::endl;
+	// b.beRepaired(2);
+	// std::cout << std::endl;
+	// a.attack("b");
+	// std::cout << std::endl;
+	// b.takeDamage(a.getAttackDamage());
+	// std::cout << std::endl;
+	// b.attack("a");
+	// std::cout << std::endl;
+	// a.takeDamage(b.getAttackDamage());
+	// std::cout << std::endl;
+	// a.beRepaired(10);
+	// a.guardGate();
 }
