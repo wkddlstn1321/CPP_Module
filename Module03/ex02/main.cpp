@@ -2,24 +2,18 @@
 
 int	main(void)
 {
-	FragTrap	a("a");
-	FragTrap	b("b");
+	FragTrap	frag("FragTrap");
+	ClapTrap	clap("ClapTrap");
 
 	std::cout << std::endl;
-	a.attack("b");
+	clap.attack("FragTrap");
 	std::cout << std::endl;
-	b.takeDamage(a.getAttackDamage());
+	frag.takeDamage(clap.getAttackDamage());
 	std::cout << std::endl;
-	b.beRepaired(2);
+	frag.attack("ClapTrap");
 	std::cout << std::endl;
-	a.attack("b");
+	clap.takeDamage(frag.getAttackDamage());
 	std::cout << std::endl;
-	b.takeDamage(a.getAttackDamage());
+	frag.highFivesGuys();
 	std::cout << std::endl;
-	b.attack("a");
-	std::cout << std::endl;
-	a.takeDamage(b.getAttackDamage());
-	std::cout << std::endl;
-	a.beRepaired(10);
-	a.highFivesGuys();
 }
