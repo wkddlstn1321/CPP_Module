@@ -145,34 +145,34 @@ void	Fixed::setRawBits(int const raw)
 	this->fixedPoint = raw;
 }
 
-float	Fixed::min(Fixed& fixed1, Fixed& fixed2)
+Fixed&	Fixed::min(Fixed& fixed1, Fixed& fixed2)
 {
 	if (fixed1.toFloat() < fixed2.toFloat())
-		return (fixed1.toFloat());
+		return (fixed1);
 	else
-		return (fixed2.toFloat());
+		return (fixed2);
 }
 
-float	Fixed::min(const Fixed& fixed1, const Fixed& fixed2)
+const Fixed&	Fixed::min(const Fixed& fixed1, const Fixed& fixed2)
 {
 	if (fixed1.toFloat() < fixed2.toFloat())
-		return (fixed1.toFloat());
+		return (fixed1);
 	else
-		return (fixed2.toFloat());
+		return (fixed2);
 }
 
-float	Fixed::max(Fixed& fixed1, Fixed& fixed2)
+Fixed&	Fixed::max(Fixed& fixed1, Fixed& fixed2)
 {
 	if (fixed1.toFloat() > fixed2.toFloat())
-		return (fixed1.toFloat());
+		return (fixed1);
 	else
-		return (fixed2.toFloat());
+		return (fixed2);
 }
 
-float	Fixed::max(const Fixed& fixed1, const Fixed& fixed2)
+const Fixed&	Fixed::max(const Fixed& fixed1, const Fixed& fixed2)
 {
 	if (fixed1.toFloat() > fixed2.toFloat())
-		return (fixed1.toFloat());
+		return (fixed1);
 	else
-		return (fixed2.toFloat());
+		return (fixed2);
 }

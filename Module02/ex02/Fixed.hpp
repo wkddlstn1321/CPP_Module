@@ -41,10 +41,10 @@ public:
 	Fixed&	operator--();
 	Fixed	operator--(int);
 
-	static float	min(Fixed& fixed1, Fixed& fixed2);
-	static float	min(const Fixed& fixed1, const Fixed& fixed2);
-	static float	max(Fixed& fixed1, Fixed& fixed2);
-	static float	max(const Fixed& fixed1, const Fixed& fixed2);
+	static Fixed&			min(Fixed& fixed1, Fixed& fixed2);
+	static const Fixed&		min(const Fixed& fixed1, const Fixed& fixed2);
+	static Fixed&			max(Fixed& fixed1, Fixed& fixed2);
+	static const Fixed&		max(const Fixed& fixed1, const Fixed& fixed2);
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
