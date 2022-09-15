@@ -3,6 +3,9 @@
 ClapTrap::ClapTrap()
 {
 	std::cout << "ClapTrap is created" << std::endl;
+	this->hitPoints = 10;
+	this->energyPoints = 10;
+	this->attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name)

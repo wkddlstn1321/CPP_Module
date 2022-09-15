@@ -4,16 +4,6 @@
 class DiamondTrap : public FragTrap, public ScarTrap
 {
 private:
-	/* data */
+	std::string	name;
 public:
-	DiamondTrap(/* args */);
-	~DiamondTrap();
 };
-
-DiamondTrap::DiamondTrap(/* args */)
-{
-}
-
-DiamondTrap::~DiamondTrap()
-{
-}
