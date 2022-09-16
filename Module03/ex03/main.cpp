@@ -1,25 +1,34 @@
-#include"FragTrap.hpp"
+#include"DiamondTrap.hpp"
 
 int	main(void)
 {
-	FragTrap	a("a");
-	FragTrap	b("b");
+	std::cout << std::endl;
+	std::cout << std::endl;
+	ClapTrap	clap("ClapTrap");
+	std::cout << "=============================" << std::endl;
+	ScavTrap	scav("ScavTrap");
+	std::cout << "=============================" << std::endl;
+	FragTrap	frag("fragTrap");
+	std::cout << "=============================" << std::endl;
+	DiamondTrap	monster("DiamondTrap");
+	std::cout << "=============================" << std::endl;
+	std::cout << std::endl;
 
+	frag.takeDamage(clap.getAttackDamage());
+	monster.takeDamage(clap.getAttackDamage());
 	std::cout << std::endl;
-	a.attack("b");
+
+	scav.beRepaired(0);
 	std::cout << std::endl;
-	b.takeDamage(a.getAttackDamage());
+	monster.beRepaired(0);
 	std::cout << std::endl;
-	b.beRepaired(2);
+
+	frag.attack("clap");
 	std::cout << std::endl;
-	a.attack("b");
+	scav.attack("clap");
 	std::cout << std::endl;
-	b.takeDamage(a.getAttackDamage());
+	monster.attack("clap");
 	std::cout << std::endl;
-	b.attack("a");
-	std::cout << std::endl;
-	a.takeDamage(b.getAttackDamage());
-	std::cout << std::endl;
-	a.beRepaired(10);
-	a.highFivesGuys();
+
+	monster.whoAmI();
 }
