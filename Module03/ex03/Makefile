@@ -1,9 +1,9 @@
 NAME	= DiamondTrap
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp ClapTrap.cpp ScarTrap.cpp FragTrap.cpp Diamond.cpp
+SRC		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ		= $(SRC:.cpp=.o)
-HEAD	= ClapTrap.hpp ScarTrap.hpp FragTrap.hpp Diamond.hpp
+HEAD	= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 %.o : %.cpp $(HEAD)
 	$(CC) $(CFLAGS) -c $(SRC)

@@ -1,9 +1,9 @@
 NAME	= FragTrap
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp ClapTrap.cpp ScarTrap.cpp FragTrap.cpp
+SRC		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ		= $(SRC:.cpp=.o)
-HEAD	= ClapTrap.hpp ScarTrap.hpp FragTrap.hpp
+HEAD	= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 %.o : %.cpp $(HEAD)
 	$(CC) $(CFLAGS) -c $(SRC)

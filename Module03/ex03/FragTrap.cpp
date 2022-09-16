@@ -19,20 +19,20 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap " << this->name << " is died" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &scartrap)
+FragTrap::FragTrap(const FragTrap &Scavtrap)
 {
-	this->name = scartrap.name;
-	this->hitPoints = scartrap.hitPoints;
-	this->energyPoints = scartrap.energyPoints;
-	this->attackDamage = scartrap.attackDamage;
+	this->name = Scavtrap.name;
+	this->hitPoints = Scavtrap.hitPoints;
+	this->energyPoints = Scavtrap.energyPoints;
+	this->attackDamage = Scavtrap.attackDamage;
 }
 
-FragTrap&	FragTrap::operator=(FragTrap scarTrap)
+FragTrap&	FragTrap::operator=(FragTrap ScavTrap)
 {
-	this->name = scarTrap.name;
-	this->hitPoints = scarTrap.hitPoints;
-	this->energyPoints = scarTrap.energyPoints;
-	this->attackDamage = scarTrap.attackDamage;
+	this->name = ScavTrap.name;
+	this->hitPoints = ScavTrap.hitPoints;
+	this->energyPoints = ScavTrap.energyPoints;
+	this->attackDamage = ScavTrap.attackDamage;
 	return (*this);
 }
 

@@ -1,19 +1,19 @@
-#include"ScarTrap.hpp"
+#include"ScavTrap.hpp"
 
 int	main(void)
 {
-	ScarTrap	scar("ScarTrap");
+	ScavTrap	Scav("ScavTrap");
 	ClapTrap	clap("ClapTrap");
 
 	std::cout << std::endl;
-	clap.attack("ScarTrap");
+	clap.attack("ScavTrap");
 	std::cout << std::endl;
-	scar.takeDamage(clap.getAttackDamage());
+	Scav.takeDamage(clap.getAttackDamage());
 	std::cout << std::endl;
-	scar.attack("ClapTrap");
+	Scav.attack("ClapTrap");
 	std::cout << std::endl;
-	clap.takeDamage(scar.getAttackDamage());
+	clap.takeDamage(Scav.getAttackDamage());
 	std::cout << std::endl;
-	scar.guardGate();
+	Scav.guardGate();
 	std::cout << std::endl;
 }
