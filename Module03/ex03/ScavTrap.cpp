@@ -53,3 +53,8 @@ void	ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap "<< this->name << " is guardGateMode" << std::endl;
 }
+
+unsigned int ScavTrap::scavEnergyPoints()
+{
+	return (50);
+}
