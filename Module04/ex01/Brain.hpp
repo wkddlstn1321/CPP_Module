@@ -2,6 +2,7 @@
 # define BRAIN_HPP
 
 #include<iostream>
+#include<algorithm>
 
 class Brain
 {
@@ -10,12 +11,9 @@ protected:
 
 public:
 	Brain();
-	Brain(std::string type);
-	virtual ~Brain();
-	Brain(const Brain &animal);
-	Brain &operator=(const Brain &animal);
-	virtual void	makeSound()const;
-	std::string	getType()const;
+	~Brain();
+	Brain(const Brain &brain);
+	Brain &operator=(const Brain &brain);
 };
 
 #endif

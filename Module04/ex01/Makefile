@@ -1,9 +1,9 @@
 NAME	= Animal
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp Cat.cpp Dog.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRC		= main.cpp Cat.cpp Dog.cpp Animal.cpp Brain.cpp
 OBJ		= $(SRC:.cpp=.o)
-HEAD	= Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+HEAD	= Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 
 %.o : %.cpp $(HEAD)
 	$(CC) $(CFLAGS) -c $(SRC)
