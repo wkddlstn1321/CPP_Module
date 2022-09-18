@@ -2,7 +2,7 @@
 
 Dog::Dog()
 {
-	std::cout << "Dog is create" << std::endl;
+	std::cout << "Dog constructor" << std::endl;
 	this->type = "Dog";
 }
 
@@ -13,11 +13,13 @@ Dog::~Dog()
 
 Dog::Dog(const Dog &dog)
 {
+	std::cout << "Dog copy constructor" << std::endl;
 	this->type = dog.type;
 }
 
 Dog&	Dog::operator=(const Dog &dog)
 {
+	std::cout << "Dog Assignment Operator Overloading" << std::endl;
 	this->type = dog.type;
 	return (*this);
 }

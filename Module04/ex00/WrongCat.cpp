@@ -2,7 +2,7 @@
 
 WrongCat::WrongCat()
 {
-	std::cout << "WrongCat is create" << std::endl;
+	std::cout << "WrongCat constructor" << std::endl;
 	this->type = "WrongCat";
 }
 
@@ -13,11 +13,13 @@ WrongCat::~WrongCat()
 
 WrongCat::WrongCat(const WrongCat &Wrongcat)
 {
+	std::cout << "WrongCat copy constructor" << std::endl;
 	this->type = Wrongcat.type;
 }
 
 WrongCat&	WrongCat::operator=(const WrongCat &Wrongcat)
 {
+	std::cout << "WrongCat Assignment Operator Overloading" << std::endl;
 	this->type = Wrongcat.type;
 	return (*this);
 }

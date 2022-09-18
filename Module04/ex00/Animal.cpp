@@ -2,12 +2,12 @@
 
 Animal::Animal()
 {
-	std::cout << "Animal is create" << std::endl;
+	std::cout << "Animal constructor" << std::endl;
 }
 
 Animal::Animal(std::string type)
 {
-	std::cout << "Animal " << type << " is create" << std::endl;
+	std::cout << "Animal type is " << type << std::endl;
 	this->type = type;
 }
 
@@ -18,11 +18,13 @@ Animal::~Animal()
 
 Animal::Animal(const Animal &animal)
 {
+	std::cout << "Animal copy constructor" << std::endl;
 	this->type = animal.type;
 }
 
 Animal&	Animal::operator=(const Animal &animal)
 {
+	std::cout << "Animal Assignment Operator Overloading" << std::endl;
 	this->type = animal.type;
 	return (*this);
 }
