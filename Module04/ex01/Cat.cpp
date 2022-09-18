@@ -2,7 +2,7 @@
 
 Cat::Cat()
 {
-	std::cout << "Cat is create" << std::endl;
+	std::cout << "Cat constructor" << std::endl;
 	this->type = "Cat";
 	this->brain = new Brain();
 }
@@ -15,6 +15,7 @@ Cat::~Cat()
 
 Cat::Cat(const Cat &cat)
 {
+	std::cout << "Cat copy constructor" << std::endl;
 	this->type = cat.type;
 	delete this->brain;
 	this->brain = new Brain();
@@ -23,6 +24,7 @@ Cat::Cat(const Cat &cat)
 
 Cat&	Cat::operator=(const Cat &cat)
 {
+	std::cout << "Cat Assignment Operator Overloading" << std::endl;
 	this->type = cat.type;
 	delete this->brain;
 	this->brain = new Brain();

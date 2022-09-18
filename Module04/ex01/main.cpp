@@ -8,16 +8,17 @@ int main()
 	const Animal* i = new Cat();
 	delete j;//should not create a leak
 	delete i;
-	// Animal	*animal = new Animal[4];
-	// for (int i = 0 ; i < 50 ; i++)
-	// {
-	// 	if (i < 25)
-	// 		animal[i] = Dog();
-	// 	else
-	// 		animal[i] = Cat();
-	// 	std::cout << std::endl;
-	// }
-	// delete[] animal;
-	system("leaks Animal");
+	std::cout << "========Array create========" << std::endl;
+	Animal	*animal = new Animal[4];
+	for (int i = 0 ; i < 4 ; i++)
+	{
+		if (i < 2)
+			animal[i] = Dog();
+		else
+			animal[i] = Cat();
+		std::cout << std::endl;
+	}
+	std::cout << "========Array delete========" << std::endl;
+	delete[] animal;
 	return 0;
 }
