@@ -17,9 +17,7 @@ Cat::Cat(const Cat &cat)
 {
 	std::cout << "Cat copy constructor" << std::endl;
 	this->type = cat.type;
-	delete this->brain;
-	this->brain = new Brain();
-	this->brain = cat.brain;
+	this->brain = new Brain(*cat.brain);
 }
 
 Cat&	Cat::operator=(const Cat &cat)
@@ -27,8 +25,7 @@ Cat&	Cat::operator=(const Cat &cat)
 	std::cout << "Cat Assignment Operator Overloading" << std::endl;
 	this->type = cat.type;
 	delete this->brain;
-	this->brain = new Brain();
-	this->brain = cat.brain;
+	this->brain = new Brain(*cat.brain);
 	return (*this);
 }
 
@@ -40,4 +37,14 @@ void	Cat::makeSound()const
 std::string	Cat::getType()const
 {
 	return (this->type);
+}
+
+void	Cat::brainPrint(int n)
+{
+	this->brain->ideasPrint(n);
+}
+
+void	Cat::setBrain(std::string str)
+{
+	this->brain->setBrainIdeas(str);
 }
