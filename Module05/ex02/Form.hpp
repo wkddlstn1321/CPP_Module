@@ -10,17 +10,18 @@ private:
 	const std::string name;
 	bool	signature;
 	const int grade;
-	Form();
 
 public:
+	Form();
 	Form(const std::string name, const int grade);
 	Form(const Form& form);
 	Form& operator=(const Form& form);
-	~Form();
+	virtual ~Form();
 	std::string	getName() const;
 	int	 getGrade() const;
 	bool getSignature() const;
 	int beSigned(const Bureaucrat& bureaucrat);
+	virtual void execute(Bureaucrat const & executor) const = 0;
 	class GradeTooHighException : public std::exception
 	{
 	public:

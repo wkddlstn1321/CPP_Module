@@ -1,5 +1,9 @@
 #include"Bureaucrat.hpp"
 
+Bureaucrat::Bureaucrat()
+{
+}
+
 Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 {
 	try
