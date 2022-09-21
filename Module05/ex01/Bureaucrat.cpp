@@ -1,4 +1,5 @@
 #include"Bureaucrat.hpp"
+#include"Form.hpp"
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 {
@@ -76,6 +77,18 @@ void	Bureaucrat::gradeDown()
 	}
 	std::cout << this->name << " is grade Down" << std::endl;
 	this->grade += 1;
+}
+
+void	Bureaucrat::signForm(Form &form)
+{
+	int	checkSign;
+
+	checkSign = form.beSigned(*this);
+	if (checkSign == 1)
+		std::cout << this->name << " couldn’t sign " << form.getName() << " because " << this->name << " grade = " << this->grade <<
+		" " << form.getName() << " grade = " << form.getGrade() << std::endl;
+	else
+		std::cout << this->name << " signed " << form.getName() << std::endl; 
 }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)

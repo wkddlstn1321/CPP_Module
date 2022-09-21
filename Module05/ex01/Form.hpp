@@ -8,7 +8,7 @@ class Form
 {
 private:
 	const std::string name;
-	bool	signature = false;
+	bool	signature;
 	const int grade;
 public:
 	Form(const std::string name, const int grade);
@@ -18,7 +18,7 @@ public:
 	std::string	getName() const;
 	int	 getGrade() const;
 	bool getSignature() const;
-	void beSigned(const Bureaucrat& bureaucrat);
+	int beSigned(const Bureaucrat& bureaucrat);
 	class GradeTooHighException : public std::exception
 	{
 	public:

@@ -1,4 +1,4 @@
-NAME	= Bureaucrat
+NAME	= Form
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp Bureaucrat.cpp Form.cpp

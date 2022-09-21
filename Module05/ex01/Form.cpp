@@ -2,6 +2,7 @@
 
 Form::Form(const std::string name, const int grade) : name(name), grade(grade)
 {
+	this->signature = false;
 	try
 	{
 		if (grade > 150)
@@ -20,6 +21,7 @@ Form::Form(const std::string name, const int grade) : name(name), grade(grade)
 
 Form::Form(const Form& form) : name(form.name), grade(form.grade)
 {
+	this->signature = false;
 	std::cout << name << " is copyConstructor" << std::endl;
 }
 
@@ -50,7 +52,7 @@ bool Form::getSignature() const
 	return (this->signature);
 }
 
-void Form::beSigned(const Bureaucrat& bureaucrat)
+int Form::beSigned(const Bureaucrat& bureaucrat)
 {
 	try
 	{
@@ -60,9 +62,10 @@ void Form::beSigned(const Bureaucrat& bureaucrat)
 	catch(const std::exception& e)
 	{
 		std::cout << e.what() << '\n';
-		return ;
+		return (1);
 	}
 	this->signature = true;
+	return (0);
 }
 
 std::ostream& operator<<(std::ostream& os, const Form& form)

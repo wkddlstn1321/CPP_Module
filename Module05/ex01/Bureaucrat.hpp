@@ -4,6 +4,8 @@
 #include<iostream>
 #include<exception>
 
+class Form;
+
 class Bureaucrat
 {
 private:
@@ -19,6 +21,7 @@ public:
 	int		getGrade() const;
 	void	gradeUp();
 	void	gradeDown();
+	void	signForm(Form &form);
 	class GradeTooHighException : public std::exception
 	{
 	public:
@@ -35,6 +38,7 @@ public:
 			return ("grade is to Low");
 		}
 	};
+
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& Bureaucrat);
