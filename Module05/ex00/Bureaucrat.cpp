@@ -5,14 +5,17 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 	try
 	{
 		if (grade > 150)
-			throw Bureaucrat::GradeTooHighException();
-		if (grade < 1)
 			throw Bureaucrat::GradeTooLowException();
+		if (grade < 1)
+			throw Bureaucrat::GradeTooHighException();
 	}
 	catch(const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
+		this->grade = 0;
+		return ;
 	}
+	std::cout << name << " is employ" << std::endl;
 	this->grade = grade;
 }
 
@@ -48,13 +51,14 @@ void	Bureaucrat::gradeUp()
 	try
 	{
 		if (grade - 1 < 1)
-			throw Bureaucrat::GradeTooLowException();
+			throw Bureaucrat::GradeTooHighException();
 	}
 	catch(const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 		return ;
 	}
+	std::cout << this->name << " is grade Up" << std::endl;
 	this->grade -= 1;
 }
 
@@ -63,13 +67,14 @@ void	Bureaucrat::gradeDown()
 	try
 	{
 		if (grade + 1 > 150)
-			throw Bureaucrat::GradeTooHighException();
+			throw Bureaucrat::GradeTooLowException();
 	}
 	catch(const std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 		return ;
 	}
+	std::cout << this->name << " is grade Down" << std::endl;
 	this->grade += 1;
 }
 
