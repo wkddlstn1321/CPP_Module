@@ -1,31 +1,36 @@
 #include"Form.hpp"
+#include"ShrubberyCreationForm.hpp"
+#include"RobotomyRequestForm.hpp"
+#include"PresidentialPardonForm.hpp"
 
 int	main()
 {
 	std::cout << "======constructor output======" << std::endl;
-	Form		over("over", 0);
-	Form		a("a", 3);
-	Form		b("b", 148);
-	Bureaucrat	ins("ins", 2);
-	Bureaucrat	jang("jang", 149);
+	Bureaucrat	insjang("ins", 1);
+	Bureaucrat	jim("jim", 145);
+	ShrubberyCreationForm	shrubbery("home");
+	RobotomyRequestForm		robot("robot");
+	PresidentialPardonForm	presi("president");
 	std::cout << std::endl;
 
-	std::cout << a.getName() << std::endl; 
-	std::cout << a.getGrade() << std::endl;
-	std::cout << a.getSignature() << std::endl;
+	std::cout << "======sign Test======" << std::endl;
+	jim.signForm(shrubbery);
+	std::cout << std::endl;
+	jim.signForm(robot);
+	std::cout << std::endl;
+	jim.signForm(presi);
 	std::cout << std::endl;
 
-	std::cout << "======signed success case======" << std::endl;
-	std::cout << a << std::endl;
-	ins.signForm(a);
+	std::cout << "======execute Test======" << std::endl;
+	jim.executeForm(shrubbery);
+	insjang.executeForm(robot);
 	std::cout << std::endl;
-	std::cout << a << std::endl;
-	std::cout << "======signed fail case======" << std::endl;
-	std::cout << b << std::endl;
-	jang.signForm(b);
+	insjang.signForm(robot);
+	insjang.signForm(presi);
 	std::cout << std::endl;
-	std::cout << b << std::endl;
+	insjang.executeForm(shrubbery);
+	insjang.executeForm(robot);
+	insjang.executeForm(presi);
 	std::cout << std::endl;
-
 	std::cout << "======destructor output======" << std::endl;
 }

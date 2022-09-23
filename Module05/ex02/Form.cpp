@@ -2,6 +2,7 @@
 
 Form::Form() : grade(0)
 {
+	std::cout << "Form constructor" << std::endl;
 }
 
 Form::Form(const std::string name, const int grade) : name(name), grade(grade)
@@ -38,7 +39,7 @@ Form& Form::operator=(const Form& form)
 
 Form::~Form()
 {
-	std::cout << this->name << " was destructor" << std::endl;
+	std::cout << "Form destructor" << std::endl;
 }
 
 std::string	Form::getName() const
@@ -56,24 +57,21 @@ bool Form::getSignature() const
 	return (this->signature);
 }
 
-int Form::beSigned(const Bureaucrat& bureaucrat)
-{
-	try
-	{
-		if (this->grade < bureaucrat.getGrade())
-			throw Form::GradeTooLowException();
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-		return (1);
-	}
-	this->signature = true;
-	return (0);
-}
-
 std::ostream& operator<<(std::ostream& os, const Form& form)
 {
-	os << form.getName() << ", form grade " << form.getGrade() << ", form sign " << form.getSignature() << std::endl;
+	os << form.getTarget() << ", form grade " << form.getGrade() << ", form sign " << form.getSignature() << std::endl;
 	return (os);
+}
+
+void	Form::setTarget(std::string target)
+{
+	this->target = target;
+}
+std::string	Form::getTarget() const
+{
+	return (this->target);
+}
+void	Form::setSignature(bool status)
+{
+	this->signature = status;
 }

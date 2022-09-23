@@ -89,10 +89,32 @@ void	Bureaucrat::signForm(Form &form)
 
 	checkSign = form.beSigned(*this);
 	if (checkSign == 1)
-		std::cout << this->name << " couldn’t sign " << form.getName() << " because " << this->name << " grade = " << this->grade <<
-		" " << form.getName() << " grade = " << form.getGrade() << std::endl;
+	{
+		std::cout << this->name << " couldn’t sign " << form.getTarget() << " because " << this->name << " grade to low " << std::endl;
+	}
 	else
-		std::cout << this->name << " signed " << form.getName() << std::endl; 
+		std::cout << this->name << " signed " << form.getTarget() << std::endl; 
+}
+
+void	Bureaucrat::executeForm(Form &form)
+{
+	int	checkSign;
+
+	checkSign = form.execute(*this);
+	if (checkSign == 1)
+	{
+		if (form.getSignature() == false)
+		{
+			std::cout << this->name << " couldn’t excute " << form.getTarget() << " because " <<
+			form.getTarget() << " sign is false status" << std::endl;
+		}
+		else
+		{
+			std::cout << this->name << " couldn’t excute " << form.getTarget() << " because " << this->name << " grade to low " << std::endl;
+		}
+	}
+	else
+		std::cout << this->name << " excuted " << form.getTarget() << std::endl; 
 }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)

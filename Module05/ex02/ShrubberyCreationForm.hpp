@@ -2,6 +2,7 @@
 # define SHRUBBERYCREATIONFORM
 
 #include"Form.hpp"
+#include"Bureaucrat.hpp"
 
 class ShrubberyCreationForm : public Form
 {
@@ -13,8 +14,8 @@ public:
 	ShrubberyCreationForm(const ShrubberyCreationForm& shrubberyCreationForm);
 	ShrubberyCreationForm& operator=(const ShrubberyCreationForm& shrubberyCreationForm);
 	~ShrubberyCreationForm();
-	void execute(Bureaucrat const & executor) const;
+	int execute(Bureaucrat const & executor) const;
+	int beSigned(const Bureaucrat& bureaucrat);
 };
 
 #endif
-//ShrubberyCreationForm
