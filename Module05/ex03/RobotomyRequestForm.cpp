@@ -25,6 +25,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &r
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
+	delete this;
 	std::cout << this->getTarget() << " RobotomyRequestForm is died" << std::endl;
 }
 
