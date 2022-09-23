@@ -24,7 +24,6 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	delete this;
 	std::cout << this->getTarget() << " ShrubberyCreationForm is died" << std::endl;
 }
 

@@ -1,4 +1,4 @@
-NAME	= Form
+NAME	= Intern
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp

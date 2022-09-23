@@ -35,4 +35,7 @@ int	main()
 	insjang.executeForm(*presi);
 	std::cout << std::endl;
 	std::cout << "======destructor output======" << std::endl;
+	delete shrubbery;
+	delete robot;
+	delete presi;
 }

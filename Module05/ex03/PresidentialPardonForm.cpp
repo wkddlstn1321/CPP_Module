@@ -23,7 +23,6 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	delete this;
 	std::cout << this->getTarget() << " PresidentialPardonForm is died" << std::endl;
 }
 
