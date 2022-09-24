@@ -1,9 +1,9 @@
-NAME	= converType
+NAME	= convert
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp
+SRC		= main.cpp parsing.cpp
 OBJ		= $(SRC:.cpp=.o)
-HEAD	= 
+HEAD	= convert.hpp
 
 %.o : %.cpp $(HEAD)
 	$(CC) $(CFLAGS) -c $(SRC)
