@@ -1,15 +1,5 @@
 #include<iostream>
-
-int	parse(std::string str)
-{
-	if (str.length() > 1)
-	{
-		while ()
-		{
-			;
-		}
-	}
-}
+#include<cstring>
 
 int	main(int ac, char **av)
 {
@@ -18,16 +8,17 @@ int	main(int ac, char **av)
 		std::cout << "[./typeCast] [argument]" << std::endl;
 		return (1);
 	}
-	std::string	line;
-	line = static_cast<std::string>(av[1]);
+	char	*pos;
+	strtod(av[1], &pos);
+	{
+		
+	}
+	if (strlen(av[1]) > 1);
+		parse(av[1]);
+	
 	int			check;
 
 	
-	n = line.find(".");
-	if (line.length() == 1 && )
-	
-	
-	if (n == std::string::npos && line.length() == 1)
-		;
-	
+	// n = line.find(".");
+	// if (line.length() == 1 && )	
 }
