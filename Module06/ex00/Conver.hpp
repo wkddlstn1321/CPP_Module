@@ -2,7 +2,6 @@
 # define CONVER_HPP
 
 #include<iostream>
-#include<limits>
 #include<cstring>
 #include<cstdlib>
 #include<ctype.h>
