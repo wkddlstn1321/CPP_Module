@@ -2,9 +2,9 @@
 # define CONVER_HPP
 
 #include<iostream>
-#include<cstring>
+#include<string>
 #include<cstdlib>
-#include<ctype.h>
+#include<cctype>
 #include<cmath>
 
 bool	isCharType(char *str);
