@@ -54,9 +54,9 @@ int	prinNanType()
 
 int	prinIntType(int i, std::string s)
 {
-	if (static_cast<char>(i) < 32 && static_cast<char>(i) >= 0)
+	if (i < 32 && i >= 0)
 		std::cout << "char: Non displayable" << std::endl;
-	else if (static_cast<char>(i) > 126 || static_cast<char>(i) < 0)
+	else if (i > 126 || i < 0)
 		std::cout << "char: impossible" << std::endl;
 	else
 		std::cout << "char: '" << static_cast<char>(i) << "'" << std::endl;
@@ -76,9 +76,9 @@ int	prinIntType(int i, std::string s)
 
 int	prinFloatType(float f, std::string s)
 {
-	if (static_cast<char>(f) < 32 && static_cast<char>(f) >= 0)
+	if (f < 32 && f >= 0)
 		std::cout << "char: Non displayable" << std::endl;
-	else if (static_cast<char>(f) > 126 || static_cast<char>(f) < 0)
+	else if (f > 126 || f < 0)
 		std::cout << "char: impossible" << std::endl;
 	else
 		std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
@@ -101,9 +101,9 @@ int	prinFloatType(float f, std::string s)
 
 int prinDoubleType(double d, std::string s)
 {
-	if (static_cast<char>(d) < 32 && static_cast<char>(d) >= 0)
+	if (d < 32 && d >= 0)
 		std::cout << "char: Non displayable" << std::endl;
-	else if (static_cast<char>(d) > 126 || static_cast<char>(d) < 0)
+	else if (d > 126 || d < 0)
 		std::cout << "char: impossible" << std::endl;
 	else
 		std::cout << "char: '" << static_cast<char>(d) << "'" << std::endl;
@@ -113,13 +113,13 @@ int prinDoubleType(double d, std::string s)
 		std::cout << "int: " << static_cast<int>(d) << std::endl;
 	if (s.length() <= 6)
 	{
-		std::cout << "float: " << d << ".0f" << std::endl;
-		std::cout << "double: " << static_cast<double>(d) << ".0" << std::endl;
+		std::cout << "float: " << static_cast<float>(d) << ".0f" << std::endl;
+		std::cout << "double: " << d << ".0" << std::endl;
 	}
 	else
 	{
-		std::cout << "float: " << d << "f" << std::endl;
-		std::cout << "double: " << static_cast<double>(d) << std::endl;
+		std::cout << "float: " << static_cast<float>(d) << "f" << std::endl;
+		std::cout << "double: " << d << std::endl;
 	}
 	return (0);
 }
