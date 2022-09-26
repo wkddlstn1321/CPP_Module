@@ -91,7 +91,7 @@ int	prinFloatType(float f, std::string s)
 		std::cout << "float: " << std::showpos << f << "f" << std::endl;
 		std::cout << "double: " << std::showpos<< static_cast<double>(f) << std::endl;
 	}
-	else if (s.length() <= 6 && s.find('.') == std::string::npos)
+	else if (s.length() <= 6 && f == static_cast<int>(f))
 	{
 		std::cout << "float: " << f << ".0f" << std::endl;
 		std::cout << "double: " << static_cast<double>(f) << ".0" << std::endl;
@@ -121,7 +121,7 @@ int prinDoubleType(double d, std::string s)
 		std::cout << "float: " << std::showpos << static_cast<float>(d) << "f" << std::endl;
 		std::cout << "double: " << std::showpos << d << std::endl;
 	}
-	else if (s.length() <= 6 && s.find('.') == std::string::npos)
+	else if (s.length() <= 6 && d == static_cast<int>(d))
 	{
 		std::cout << "float: " << static_cast<float>(d) << ".0f" << std::endl;
 		std::cout << "double: " << d << ".0" << std::endl;
