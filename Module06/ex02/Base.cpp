@@ -9,17 +9,20 @@ Base*	generate(void)
 	srand(time(NULL));
 	if ((rand() % 3) == 0)
 	{
-		A *a = NULL;
+		static A dum;
+		A *a = &dum;
 		return (dynamic_cast<Base*>(a));
 	}
 	else if ((rand() % 3) == 1)
 	{
-		B *b = NULL;
+		static B dum;
+		B *b = &dum;
 		return (dynamic_cast<Base*>(b));
 	}
 	else
 	{
-		C *c = NULL;
+		static C dum;
+		C *c = &dum;
 		return (dynamic_cast<Base*>(c));
 	}
 
@@ -33,20 +36,21 @@ void identify(Base* p)
 		std::cout << "Pointer B " << std::endl;
 	else
 		std::cout << "Pointer C " << std::endl;
-	
 }
 
 void identify(Base& p)
 {
+	A a;
+	B b;
 	try
 	{
-		A& a = dynamic_cast<A&>(p);
+		a = dynamic_cast<A&>(p);
 	}
 	catch(const std::exception& e)
 	{
 		try
 		{
-			B& b = dynamic_cast<B&>(p);
+			b = dynamic_cast<B&>(p);
 		}
 		catch(const std::exception& e)
 		{
