@@ -1,9 +1,9 @@
-NAME	= convert
+NAME	= Base
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp Conver.cpp
+SRC		= main.cpp Base.cpp
 OBJ		= $(SRC:.cpp=.o)
-HEAD	= Conver.hpp
+HEAD	= Base.hpp
 
 %.o : %.cpp $(HEAD)
 	$(CC) $(CFLAGS) -c $(SRC)

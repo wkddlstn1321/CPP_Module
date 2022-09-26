@@ -1,9 +1,9 @@
-NAME	= convert
+NAME	= serialization
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
-SRC		= main.cpp Conver.cpp
+SRC		= main.cpp Data.cpp
 OBJ		= $(SRC:.cpp=.o)
-HEAD	= Conver.hpp
+HEAD	= Data.hpp
 
 %.o : %.cpp $(HEAD)
 	$(CC) $(CFLAGS) -c $(SRC)
