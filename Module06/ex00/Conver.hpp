@@ -6,6 +6,7 @@
 #include<cstdlib>
 #include<cctype>
 #include<cmath>
+#include<iomanip>
 
 bool	isCharType(char *str);
 bool	isnanType(std::string s, char *pos, double d);
