@@ -52,7 +52,7 @@ int	prinNanType()
 	return (0);
 }
 
-int	prinIntType(int i)
+int	prinIntType(int i, std::string s)
 {
 	if (static_cast<char>(i) < 32 && static_cast<char>(i) >= 0)
 		std::cout << "char: Non displayable" << std::endl;
@@ -61,12 +61,20 @@ int	prinIntType(int i)
 	else
 		std::cout << "char: '" << static_cast<char>(i) << "'" << std::endl;
 	std::cout << "int: " << i << std::endl;
-	std::cout << "float: " << static_cast<float>(i) << ".0f" << std::endl;
-	std::cout << "double: " << static_cast<double>(i) << ".0" << std::endl;
+	if (s.length() <= 6)
+	{
+		std::cout << "float: " << static_cast<float>(i) << ".0f" << std::endl;
+		std::cout << "double: " << static_cast<double>(i) << ".0" << std::endl;
+	}
+	else
+	{
+		std::cout << "float: " << static_cast<float>(i) << "f" << std::endl;
+		std::cout << "double: " << static_cast<double>(i) << std::endl;
+	}
 	return (0);
 }
 
-int	prinFloatType(float f)
+int	prinFloatType(float f, std::string s)
 {
 	if (static_cast<char>(f) < 32 && static_cast<char>(f) >= 0)
 		std::cout << "char: Non displayable" << std::endl;
@@ -74,11 +82,11 @@ int	prinFloatType(float f)
 		std::cout << "char: impossible" << std::endl;
 	else
 		std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
-	if (static_cast<int>(f) > 2147483647 || static_cast<int>(f) < -2147483648)
+	if (f > 2147483647 || f < -2147483648)
 		std::cout << "int: impossible" << std::endl;
 	else
 		std::cout << "int: " << static_cast<int>(f) << std::endl;
-	if (static_cast<int>(f) == f)
+	if (s.length() <= 6)
 	{
 		std::cout << "float: " << f << ".0f" << std::endl;
 		std::cout << "double: " << static_cast<double>(f) << ".0" << std::endl;
@@ -91,7 +99,7 @@ int	prinFloatType(float f)
 	return (0);
 }
 
-int prinDoubleType(double d)
+int prinDoubleType(double d, std::string s)
 {
 	if (static_cast<char>(d) < 32 && static_cast<char>(d) >= 0)
 		std::cout << "char: Non displayable" << std::endl;
@@ -99,11 +107,11 @@ int prinDoubleType(double d)
 		std::cout << "char: impossible" << std::endl;
 	else
 		std::cout << "char: '" << static_cast<char>(d) << "'" << std::endl;
-	if (static_cast<int>(d) > 2147483647 || static_cast<int>(d) < -2147483648)
+	if (d > 2147483647 || d < -2147483648)
 		std::cout << "int: impossible" << std::endl;
 	else
 		std::cout << "int: " << static_cast<int>(d) << std::endl;
-	if (static_cast<int>(d) == d)
+	if (s.length() <= 6)
 	{
 		std::cout << "float: " << d << ".0f" << std::endl;
 		std::cout << "double: " << static_cast<double>(d) << ".0" << std::endl;

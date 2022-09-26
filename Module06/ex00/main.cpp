@@ -22,21 +22,10 @@ int	main(int ac, char **av)
 	if (isIntType(d, pos, av[1]))
 	{
 		int	i = std::atoi(av[1]);
-		return (prinIntType(i));
+		return (prinIntType(i, s));
 	}
 	if (std::strlen(pos) == 1)
-		return (prinFloatType(static_cast<float>(d)));
+		return (prinFloatType(static_cast<float>(d), s));
 	else
-		return (prinDoubleType(d));
-	// if (std::strlen(av[1]) == 1)
-	// {
-		// Conver cType(av[1][0]);
-		// cType.prinTypes();
-	// 	return (0);
-	// }
-
-	// check = strtod(av[1], &pos);
-	// if (std::strlen(pos) > 1 || (pos[0] != 'f' && pos[0] != '\0'))
-		// return (conver.nanPrin());
-	// (void)check;
+		return (prinDoubleType(d, s));
 }
