@@ -33,7 +33,7 @@ public:
 		}
 	}
 
-	Array& operator=(const Array& Array)
+	Array& operator=(const Array& array)
 	{
 		delete[] this->array;
 		this->arraySize = array.size();
@@ -45,7 +45,7 @@ public:
 		return (*this);
 	}
 
-	T&	operator[](int i)
+	T&	operator[](unsigned int i)
 	{
 		try
 		{
@@ -55,7 +55,20 @@ public:
 		catch(const std::exception& e)
 		{
 			std::cout << e.what() << std::endl;
-			return ;
+		}
+		return (this->array[i]);
+	}
+
+	T&	operator[](unsigned int i) const
+	{
+		try
+		{
+			if (i >= this->arraySize)
+				throw throwException();
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << e.what() << std::endl;
 		}
 		return (this->array[i]);
 	}

@@ -1,4 +1,4 @@
-NAME	= iter
+NAME	= Array
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
 SRC		= main.cpp

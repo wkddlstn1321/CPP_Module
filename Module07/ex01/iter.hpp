@@ -19,7 +19,7 @@ void	sumTen(T &a)
 }
 
 template<typename T>
-void	prin(T &a)
+void	prin(T a)
 {
 	std::cout << a << std::endl;
 }
