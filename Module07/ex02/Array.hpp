@@ -22,12 +22,12 @@ public:
 		this->array = new T[n];
 		this->arraySize = n;
 	}
+
 	Array(const Array& array)
 	{
-		delete[] this->array;
 		this->arraySize = array.size();
 		this->array = new T[this->arraySize];
-		for (int i = 0 ; i < this->arraySize ; i++)
+		for (unsigned int i = 0 ; i < this->arraySize ; i++)
 		{
 			this->array[i] = array[i];
 		}
@@ -38,7 +38,7 @@ public:
 		delete[] this->array;
 		this->arraySize = array.size();
 		this->array = new T[this->arraySize];
-		for (int i = 0 ; i < this->arraySize ; i++)
+		for (unsigned int i = 0 ; i < this->arraySize ; i++)
 		{
 			this->array[i] = array[i];
 		}
@@ -47,29 +47,15 @@ public:
 
 	T&	operator[](unsigned int i)
 	{
-		try
-		{
-			if (i >= this->arraySize)
-				throw throwException();
-		}
-		catch(const std::exception& e)
-		{
-			std::cout << e.what() << std::endl;
-		}
+		if (i >= this->arraySize)
+			throw throwException();
 		return (this->array[i]);
 	}
 
-	T&	operator[](unsigned int i) const
+	const T&	operator[](unsigned int i) const
 	{
-		try
-		{
-			if (i >= this->arraySize)
-				throw throwException();
-		}
-		catch(const std::exception& e)
-		{
-			std::cout << e.what() << std::endl;
-		}
+		if (i >= this->arraySize)
+			throw throwException();
 		return (this->array[i]);
 	}
 
