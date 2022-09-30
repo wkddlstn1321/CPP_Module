@@ -47,8 +47,6 @@ int	Span::shortestSpan()
 		if (min > span[i + 1] - span[i])
 			min = span[i + 1] - span[i];
 	}
-	std::cout << "this" << this->v[0] << std::endl;
-	std::cout << "span" << span[0] << std::endl;
 	return (min);
 }
 
