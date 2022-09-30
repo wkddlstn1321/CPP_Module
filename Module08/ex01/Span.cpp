@@ -2,6 +2,7 @@
 
 Span::Span()
 {
+	this->size = 0;
 }
 
 Span::Span(unsigned int N)

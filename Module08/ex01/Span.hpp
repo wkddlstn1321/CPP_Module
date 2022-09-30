@@ -10,9 +10,9 @@ class Span
 private:
 	std::vector<int> v;
 	unsigned int size;
-	Span();
 
 public:
+	Span();
 	Span(unsigned int N);
 	Span(const Span& span);
 	Span& operator=(const Span& span);
