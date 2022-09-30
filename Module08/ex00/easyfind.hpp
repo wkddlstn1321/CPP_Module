@@ -14,17 +14,6 @@ public:
 	}
 };
 
-// template<typename T>
-// typename T::iterator	easyfind(T a, int n)
-// {
-// 	typename T::iterator t;
-
-// 	t = std::find(a.begin(), a.end(), n);
-// 	if (t == a.end())
-// 		throw notFound();
-// 	return (t);
-// }
-
 template<typename T>
 typename T::iterator	easyfind(T a, int n)
 {

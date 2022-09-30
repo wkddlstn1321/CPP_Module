@@ -2,12 +2,16 @@
 # define SPAN_HPP
 
 #include<iostream>
+#include<vector>
+#include<algorithm>
 
 class Span
 {
 private:
-	int	*p;
+	std::vector<int> *v;
+	unsigned int size;
 	Span();
+
 public:
 	Span(unsigned int N);
 	Span(const Span& span);
@@ -16,6 +20,22 @@ public:
 	void addNumber(int n);
 	int	shortestSpan();
 	int	longestSpan();
+	class SizeOut : public std::exception
+	{
+	public:
+		const char *what() const throw()
+		{
+			return ("size is max");
+		}
+	};
+	class FewElements : public std::exception
+	{
+	public:
+		const char *what() const throw()
+		{
+			return ("elements is few");
+		}
+	};
 };
 
 
