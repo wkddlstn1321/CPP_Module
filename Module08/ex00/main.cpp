@@ -1,15 +1,17 @@
 #include"easyfind.hpp"
+#include<vector>
+#include<stack>
 
 int	main()
 {
 	int	temp[] = {0,1,2,3,4};
 	std::vector<int> a(temp, temp + sizeof(temp) / sizeof(int));
+	std::vector<int>::iterator iter;
 	try
 	{
-		int	*b = easyfind(a, 5);
-		std::cout << *b << std::endl;
-		b = easyfind(a, 20);
-		std::cout << *b << std::endl;
+		iter = easyfind<std::vector<int> >(a, 4);
+		std::cout << a[*iter] << std::endl;
+		std::cout << *(iter = easyfind(a, 5));
 	}
 	catch(const std::exception& e)
 	{

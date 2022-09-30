@@ -5,17 +5,6 @@
 #include<algorithm>
 #include<exception>
 
-template<typename T>
-T*	easyfind(T *a, int n)
-{
-	T	*findIdx;
-
-	findIdx = std::find(a.begin(), a.last(), int n);
-	if (findIdx == a.last())
-		throw notFound();
-	return (findIdx);
-}
-
 class notFound : public std::exception
 {
 public:
@@ -24,5 +13,27 @@ public:
 		return ("not found exception");
 	}
 };
+
+// template<typename T>
+// typename T::iterator	easyfind(T a, int n)
+// {
+// 	typename T::iterator t;
+
+// 	t = std::find(a.begin(), a.end(), n);
+// 	if (t == a.end())
+// 		throw notFound();
+// 	return (t);
+// }
+
+template<typename T>
+typename T::iterator	easyfind(T a, int n)
+{
+	typename T::iterator t;
+
+	t = std::find(a.begin(), a.end(), n);
+	if (t == a.end())
+		throw notFound();
+	return (t);
+}
 
 #endif
