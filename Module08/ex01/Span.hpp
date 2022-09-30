@@ -8,7 +8,7 @@
 class Span
 {
 private:
-	std::vector<int> *v;
+	std::vector<int> v;
 	unsigned int size;
 	Span();
 
@@ -20,6 +20,7 @@ public:
 	void addNumber(int n);
 	int	shortestSpan();
 	int	longestSpan();
+	int	getSize();
 	class SizeOut : public std::exception
 	{
 	public:
