@@ -20,7 +20,7 @@ public:
 	void addNumber(int n);
 	int	shortestSpan();
 	int	longestSpan();
-	int	getSize();
+	void copyPushBack();
 	class SizeOut : public std::exception
 	{
 	public:

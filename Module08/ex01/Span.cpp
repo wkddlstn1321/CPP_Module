@@ -60,7 +60,9 @@ int	Span::longestSpan()
 	return (max - min);
 }
 
-int	Span::getSize()
+void	Span::copyPushBack()
 {
-	return (this->v.size());
+	if (this->v.size() * 2 > this->size)
+		throw SizeOut();
+	copy(this->v.begin(), this->v.end(), std::back_inserter(this->v));
 }
