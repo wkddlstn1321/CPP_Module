@@ -25,6 +25,8 @@ int	main()
 		++it;
 	}
 	std::stack<int> s(mstack);
+	std::cout << "=========copy test===========" << std::endl;
+	std::cout << "mstack size : " << mstack.size() << " s size : " << s.size() << std::endl;
 	mstack.pop();
 	std::cout << "mstack size : " << mstack.size() << " s size : " << s.size() << std::endl;
 	std::cout << "======list cout ======" <<std::endl;
@@ -50,6 +52,5 @@ int	main()
 		std::cout << *lit << std::endl;
 		++lit;
 	}
-	std::cout << "mstack size : " << mstack.size() << " s size : " << s.size() << std::endl;
 	return 0;
 }
