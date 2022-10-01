@@ -15,7 +15,7 @@ public:
 };
 
 template<typename T>
-typename T::iterator	easyfind(T a, int n)
+typename T::iterator	easyfind(T &a, int n)
 {
 	typename T::iterator t;
 
