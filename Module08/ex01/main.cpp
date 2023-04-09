@@ -3,6 +3,8 @@
 int main()
 {
 	Span sp = Span(10241);
+	Span sp2;
+	sp2 = sp;
 	try
 	{
 		sp.addNumber(6);

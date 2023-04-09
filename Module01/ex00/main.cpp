@@ -5,6 +5,7 @@ int	main(void)
 	Zombie	zombie("Foo");
 	Zombie	zombie2("Foo2");
 	Zombie	*zombie3;
+	Zombie	a("a");
 
 	zombie.announce();
 	zombie2.announce();

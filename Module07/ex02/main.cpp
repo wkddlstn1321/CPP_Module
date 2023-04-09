@@ -1,5 +1,5 @@
 #include"Array.hpp"
-
+#include<array>
 int	main()
 {
 	Array<int> num(3);
@@ -21,6 +21,8 @@ int	main()
 		std::cout << "========== string test =============" << std::endl;
 		for (int i = 0 ; i < str.size() ; i++)
 			std::cout << str[i] << std::endl;
+		const Array<int> num4 = num;
+		std::cout << num4[0] << std::endl;
 		
 	}
 	catch(const std::exception& e)

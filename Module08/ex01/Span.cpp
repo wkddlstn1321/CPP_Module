@@ -64,5 +64,6 @@ void	Span::copyPushBack()
 {
 	if (this->v.size() * 2 > this->size)
 		throw SizeOut();
+	// v.insert(v.begin(), v.end(), v.end());
 	copy(this->v.begin(), this->v.end(), std::back_inserter(this->v));
 }
